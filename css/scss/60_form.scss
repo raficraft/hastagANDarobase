@@ -1,0 +1,46 @@
+.lightBox-content_contact{
+  display: flex;
+  flex-direction: column;
+  
+  flex : 1 0 auto;
+  align-content: stretch;
+}
+
+.lightBox-content_form{
+  display: flex;
+  flex-direction: column;  
+  justify-content: space-between;
+  flex : 1 0 auto;
+  align-content: stretch;
+
+  .bloc-input{
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: auto auto;
+  }
+  label{
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+
+  input,textarea{
+    border-radius: 3px;
+    border: none;
+    padding: 0.5rem;
+    border : 1px solid #bdc3c7;
+
+  }
+
+  button{
+    width : 90%;
+    margin : auto auto;
+    height : 2rem;
+    font-weight: bold;
+    color : white;
+    background-color: #2c3e50;
+    border : none;
+    border-radius: 3px;
+  }
+}

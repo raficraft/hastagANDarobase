@@ -1,0 +1,141 @@
+.header-top{
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #2c3e50;
+  position : relative;
+  height: rem(60);
+  padding : rem(16);
+  z-index: 40;
+  top : 0;
+  position: absolute;
+  width : 100%;
+  border-bottom: 8px solid #2d2d2d;
+
+  h3{
+    color: white;
+    margin : 0;
+  } 
+
+  .header-nav_desktop{
+
+    background-color: crimson;
+    @include max768{
+      display: none;
+    }
+
+  } 
+
+}
+
+.header-nav_mobile{
+
+  background-color: #7f8c8d;
+  @include size(100% , 60px);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding : 0 rem(64);  
+  transition : all $duration;
+  box-shadow: $box-shadow;
+  a{
+    font-weight: bold;
+    color: white;
+  }
+
+  &[data-state="show"]{
+    transform: translateY(60px);
+    z-index : 30;
+
+  }
+  &[data-state="hide"]{
+    z-index : 10;
+    transform: translateY(0px);
+
+  }
+
+}
+
+
+@include max768{
+
+  .icon-hamburger{
+    content : '';
+    @include size(rem(32),rem(32));
+    display: block;
+    position: relative;
+    cursor : pointer;
+    background-color: #95a5a6;
+    border-radius: 50%;
+    transition: $duration;
+
+    span,span::before,span::after{
+      position: absolute;
+      @include size(20px,rem(2));
+      background-color: white;
+      content : ' ';       
+      pointer-events: none;  
+      top : centerAbsolute(2px);
+      left : centerAbsolute(20px);
+      display : block;    
+      transition: $duration;
+      transform-origin: 50% 50%;
+    }
+
+    span:before{
+      transform: translateY(rem(-6));      
+    }
+
+    span:after{
+      transform: translateY(rem(6));
+    }     
+   
+    &:hover{
+
+      span::before{
+        transform: translateY(rem(-8));      
+      }
+  
+      span::after{
+        transform: translateY(rem(8));
+      }  
+    }
+
+    &[data-state="open"]{
+      background-color: #d35400;
+      transform : rotate(180deg);
+
+      //Transform Hamburger To Cross
+
+      span{
+        background : transparent;
+      }
+
+      span::before{
+        transform : translateY(0) rotate(45deg);
+      }
+      span::after{
+        transform : translateY(0) rotate(-45deg);
+      }
+
+
+
+
+    }
+  }      
+
+  
+}
+
+
+
+/*
+[data-state="close"]{
+  background-color: yellow;
+}
+[data-state="open"]{
+  background-color: red;
+ 
+}*/

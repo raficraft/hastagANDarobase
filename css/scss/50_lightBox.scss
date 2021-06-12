@@ -1,0 +1,60 @@
+.lightbox {
+  position: absolute;
+  z-index: 30;
+  background-color: white;
+  @include size(80vw, 70vh);
+  top: centerAbsolute(70vh);
+  left: calc(50% - (80vw / 2));
+  transform: translateY(-100vh);
+  transition: $duration;
+  border-radius: 5px;
+  box-shadow: $box-shadow;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+
+  .lightBox-content {
+    display: flex;
+  }
+
+  .lightBox-content_map {
+    width: 100%;
+    height: 100%;
+  }
+  .lightBox-content_map > iframe {
+    width: 100%;
+    height: 100%;
+  }
+
+  &[data-state="show"] {
+    transform: translateY(0);
+  }
+}
+
+[data-bringsupname="call"] {
+  height: 70vh;
+  top: centerAbsolute(70vh);
+  display: flex;
+  flex-direction: column;
+
+  .lightBox-content_call {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 0 auto;
+
+    p {
+      text-align: center;
+      margin-bottom: 2rem;
+
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      transition: $duration;
+    }
+
+    &:hover .lightBox-content_call-number {
+      color: #d35400;
+    }
+  }
+}

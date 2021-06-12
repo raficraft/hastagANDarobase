@@ -1,0 +1,49 @@
+:root{
+  font-size: 16px;
+  font-family: 'Roboto' , sans-serif;
+}
+
+body{
+  font-size : 1.6rem;
+  color: var(--text);
+  font-family: var(--font-family);
+  position: relative;
+}
+
+h1,h2,h3,h4{
+  margin-bottom: rem(20);
+}
+
+h1{
+  font-size: rem(32);
+}
+
+h2{
+  font-size: rem(28);
+}
+
+h3{
+  font-size : rem(24);
+}
+
+h4{
+  font-size: rem(20);
+}
+
+ul{
+  list-style: 0;
+}
+
+img{
+  max-width: 100%;
+}
+
+a{
+  text-decoration: none;
+  color : black;
+  font-size: rem(16);
+}
+
+
+
+

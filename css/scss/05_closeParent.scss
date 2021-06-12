@@ -1,0 +1,63 @@
+.closeParent{
+
+  content : '';
+  @include size(rem(32),rem(32));
+  display: block;
+  cursor : pointer;
+  background-color: #95a5a6;
+  border-radius: 50%;
+  transition: $duration;
+  position: absolute;
+  z-index: 500;
+  
+  &_absolute{
+    top : -16px;
+    right : -16px;
+  }
+
+
+  span,span::before,span::after{
+
+    position: absolute;
+    @include size(20px,rem(2));
+    background-color: white;
+    content : ' ';       
+    pointer-events: none;  
+    top : centerAbsolute(2px);
+    left : centerAbsolute(20px);
+    display : block;    
+    transition: $duration;
+    transform-origin: 50% 50%;
+  }
+
+  span{
+    background-color: transparent;
+  }
+
+  &:hover{
+    background-color: #e67e22;
+    transform : rotate(180deg);
+  }
+
+  span::before{
+    transform : translateY(0) rotate(45deg);
+  }
+  span::after{
+    transform : translateY(0) rotate(-45deg);
+  }
+
+}
+
+
+
+
+
+:root{
+
+  --size-arrowrapper : 50px;
+  --size-arrow : 20%;
+  --rotate-arrow : 45deg;
+  --rotate-arrow2 : -45deg;
+
+}
+

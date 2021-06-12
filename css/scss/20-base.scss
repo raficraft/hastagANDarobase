@@ -1,0 +1,53 @@
+.horizontal-scroll-wrapper {
+  position : absolute;
+  width : 100%;
+  display: flex;
+  background-color: red;
+  overflow-x: hidden;
+}
+
+.slide-container{
+  display: flex;
+  min-height: 100%;
+}
+
+.horizontal-scroll-wrapper .slide{
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #d8fcaf;
+  min-width: 97vw;
+  min-height: 100%;
+
+}
+
+.horizontal-scroll-wrapper .slide:nth-child(2n){
+  background-color: #9de0e8;
+}
+
+
+.content{
+  padding: 3.5rem;
+  max-width: 800px;
+  text-align: center;
+}
+
+.content P{
+  font-size: 1.3rem;
+  line-height: 1.4rem;
+}
+
+.content:nth-child(2n) P{
+  color : rgb(211, 211, 211);
+}
+
+
+.active{
+  background-color: rgb(134, 134, 134);
+}
+
+header{
+  position: relative;
+}
+

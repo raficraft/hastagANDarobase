@@ -1,0 +1,20 @@
+.content-home_pictures{
+  display: flex;
+  flex-direction: column;
+
+  div{
+    
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 1rem;
+
+    p{
+      font-size: 1rem;
+    }
+
+  }
+
+  i{
+    font-size: 4rem;
+  }
+}

@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scroll Parallax X</title>
+    <link href="css/style.css" rel="stylesheet" />
+    <script type="module" src="js/main.js" defer></script>
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.1/css/all.css"
+      integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav
+      class="header-nav_mobile"
+      data-bringsupname="menu"
+      data-state="hide"
+      data-hsnav
+    >
+      <a href="#" data-hsLink>Acceuil</a>
+      <a href="#" data-hsLink>Boutique</a>
+      <a href="#" data-hsLink>Services</a>
+    </nav>
+
+    <header class="header-top">
+      <a href="#"><h3>#ashtag & @robase</h3></a>
+
+      <nav class="header-nav_desktop" data-hsnav>
+        <a href="#" data-hsLink>Acceuil2</a>
+        <a href="#" data-hsLink>Boutique2</a>
+        <a href="#" data-hsLink>Services2</a>
+      </nav>
+
+      <div class="icon-hamburger" data-bringsup="menu" data-state="close">
+        <span></span>
+      </div>
+    </header>
+
+    <main class="horizontal-scroll-wrapper" data-hs>
+      <section class="slide-container" data-hsContainer>
+        <section class="slide slideFirst">
+          <div class="content content-home_pictures">
+            <h4>Nos services et tarif</h4>
+
+            <div>
+              <i
+                class="fas fa-mobile"
+                data-bringsup="price"
+                data-state="close"
+                data-component="listBrand"
+                data-collection="brand"
+                data-req="searchData"
+                data-field="support"
+                data-product="mobile"
+              ></i>
+            </div>
+
+            <div>
+              <i
+                class="fas fa-desktop"
+                data-bringsup="price"
+                data-state="close"
+                data-component="listBrand"
+                data-collection="brand"
+                data-req="searchData"
+                data-field="support"
+                data-product="computer"
+              ></i>
+            </div>
+
+            <div>
+              <i
+                class="fas fa-tablet"
+                data-bringsup="price"
+                data-state="close"
+                data-component="listBrand"
+                data-collection="brand"
+                data-req="searchData"
+                data-field="support"
+                data-product="tablet"
+              ></i>
+            </div>
+          </div>
+        </section>
+
+        <section class="slide">
+          <div class="content">
+            <h1>Section Two</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sem
+              dolor, pretium eu libero sodales, ultricies venenatis ante. Nam
+              mattis nibh metus, quis aliquet ex ullamcorper id. Fusce sit amet
+              libero maximus, imperdiet lorem iaculis, volutpat eros. Sed sit
+              amet fermentum lorem, ut venenatis eros.
+            </p>
+          </div>
+        </section>
+
+        <section class="slide">
+          <div class="content">
+            <h1>Section Three</h1>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sem
+              dolor, pretium eu libero sodales, ultricies venenatis ante. Nam
+              mattis nibh metus, quis aliquet ex ullamcorper id. Fusce sit amet
+              libero maximus, imperdiet lorem iaculis, volutpat eros. Sed sit
+              amet fermentum lorem, ut venenatis eros.
+            </p>
+
+            <footer>
+              <aside class="icon-social">
+                <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+              </aside>
+            </footer>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <aside class="icon-lightBox">
+      <i
+        class="fas fa-map-marker-alt"
+        data-bringsup="map"
+        data-state="close"
+      ></i>
+      <i class="fas fa-phone-alt" data-bringsup="call" data-state="close"></i>
+      <i
+        class="far fa-envelope-open"
+        data-bringsup="contact"
+        data-state="close"
+      ></i>
+    </aside>
+
+    <!-- Price get content with JS -->
+
+    <section
+      class="priceSlider"
+      data-bringsupname="price"
+      data-state="hide"
+      data-lightbox="true"
+      data-priceSlider
+    >
+      <div class="carousel">
+        <div class="priceSlider-content" data-priceSliderContainer>
+
+          <div class="priceSlider-content_brand">
+            <!-- content inject with JS-->
+          </div>
+
+          <div class="priceSlider-content_product">
+            <!-- content inject with JS-->
+          </div>
+
+          <div class="priceSlider-content_service">
+            <!-- content inject with JS-->
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+    <!-- LightBox -->
+    <!-- Map -->
+
+    <section
+      class="lightbox"
+      data-bringsupname="map"
+      data-state="hide"
+      data-lightbox="true"
+    >
+      <div class="closeParent closeParent_absolute" data-js="closeParent">
+        <span></span>
+      </div>
+
+      <div class="lightBox-content lightBox-content_map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2790.0738125053126!2d4.826768615562969!3d45.62925347910327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47f4e7957219bf51%3A0x98912ed4f5ac6481!2zNDUgQXZlbnVlIGR1IERhdXBoaW7DqSwgNjkzNjAgU8OpcsOpemluLWR1LVJow7RuZQ!5e0!3m2!1sfr!2sfr!4v1622295116791!5m2!1sfr!2sfr"
+          width="600"
+          height="450"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+        ></iframe>
+      </div>
+    </section>
+
+    <!-- Call -->
+
+    <section
+      class="lightbox"
+      data-bringsupname="call"
+      data-state="hide"
+      data-lightbox="true"
+    >
+      <div class="closeParent closeParent_absolute" data-js="closeParent">
+        <span></span>
+      </div>
+
+      <a
+        href="tel:0688158799"
+        class="lightBox-content lightBox-content_call"
+        textAnimatedContainer
+      >
+        <p>Cliquer pour nous appeler</p>
+        <p class="lightBox-content_call-number" textAnimated-name="call">
+          06.88.15.87.99
+        </p>
+        <p textAnimated-name="adress01">45 avenue du Dauphiné</p>
+        <p textAnimated-name="adress02">69360 SEREZIN DU RHONE</p>
+      </a>
+    </section>
+
+    <!-- Contact -->
+
+    <section
+      class="lightbox"
+      data-bringsupname="contact"
+      data-state="hide"
+      data-lightbox="true"
+    >
+      <div class="closeParent closeParent_absolute" data-js="closeParent">
+        <span></span>
+      </div>
+
+      <div class="lightBox-content lightBox-content_contact">
+        <h1>Contacter Nous</h1>
+
+        <form class="lightBox-content_form">
+          <div class="bloc-input">
+            <label>Email</label>
+            <input type="email" />
+          </div>
+
+          <div class="bloc-input">
+            <label>Titre du message</label>
+            <input type="text" />
+          </div>
+
+          <div class="bloc-input">
+            <label>Message</label>
+            <textarea name="" id="" cols="30" rows="10"></textarea>
+          </div>
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </section>
+  </body>
+</html>
